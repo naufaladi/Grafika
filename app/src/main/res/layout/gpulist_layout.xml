@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="4dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:paddingTop="0dp"
+        app:cardBackgroundColor="@color/cardview_dark_background"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:contentPadding="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_model"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="8dp"
+                android:text="TextView"
+                android:textColor="@color/cardview_light_background"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.042"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="NVIDIA GTX 1060-6GB" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="16dp"
+                android:textColor="@color/browser_actions_bg_grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Desktop" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_benchsymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="43dp"
+                android:layout_marginTop="10dp"
+                android:text="B"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_gpulistlayout_model" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_bench"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:text="TextView"
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gpulistlayout_benchsymbol"
+                app:layout_constraintStart_toEndOf="@+id/text_gpulistlayout_benchsymbol"
+                tools:text="12475" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_valuesymbol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:text="V"
+                android:textColor="@color/fui_bgTwitter"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gpulistlayout_bench"
+                app:layout_constraintStart_toEndOf="@+id/text_gpulistlayout_bench" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_value"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="TextView"
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gpulistlayout_bench"
+                app:layout_constraintStart_toEndOf="@+id/text_gpulistlayout_valuesymbol"
+                tools:text="95.12" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_pricesymboldollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="90dp"
+                android:text="$"
+                android:textColor="@color/fui_bgPhone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gpulistlayout_price"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/text_gpulistlayout_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="TextView"
+                android:textColor="@color/cardview_light_background"
+                app:layout_constraintBaseline_toBaselineOf="@+id/text_gpulistlayout_value"
+                app:layout_constraintStart_toEndOf="@+id/text_gpulistlayout_pricesymboldollar"
+                tools:text="520.99" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

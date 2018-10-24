@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Grafika</string>
+
+    <string-array name="sortby">
+        <item>Bench</item>
+        <item>Value</item>
+        <item>Price</item>
+    </string-array>
+
+    <string-array name="sortorder">
+        <item>Descending</item>
+        <item>Ascending</item>
+    </string-array>
+
+    <string-array name="filtertype">
+        <item>All</item>
+        <item>Desktop</item>
+        <item>Mobile</item>
+        <item>Workstation</item>
+    </string-array>
+
+    <string-array name="filterprice">
+        <item>Any Price</item>
+        <item>0 to 300</item>
+        <item>300 to 600</item>
+        <item>600 upward</item>
+    </string-array>
+
+
+</resources>

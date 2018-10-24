@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "135884057057",
+    "firebase_url": "https://grafikav3.firebaseio.com",
+    "project_id": "grafikav3",
+    "storage_bucket": "grafikav3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135884057057:android:62bfa28b78e37bb5",
+        "android_client_info": {
+          "package_name": "com.wordpress.devkappa.grafikav3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135884057057-gavi7n75pnjk5keh7osc3dbra0463ar1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wordpress.devkappa.grafikav3",
+            "certificate_hash": "38ae23f5fa627e59a66762ba3db7bb44bb91fe46"
+          }
+        },
+        {
+          "client_id": "135884057057-3ldkde0mvifamkmel50scepk7aqehf43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3RMEgyi-OKAMHd6OubEz1KWHlXHFNCAA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135884057057-3ldkde0mvifamkmel50scepk7aqehf43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
