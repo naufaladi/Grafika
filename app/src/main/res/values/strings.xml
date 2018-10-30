@@ -26,5 +26,12 @@
         <item>600 upward</item>
     </string-array>
 
+    <string-array name="dialogdetails">
+        <item>details1</item>
+        <item>Desktop</item>
+        <item>Mobile</item>
+        <item>Workstation</item>
+    </string-array>
+
 
 </resources>

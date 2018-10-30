@@ -1,8 +1,11 @@
 package com.wordpress.devkappa.grafikav3;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -16,6 +19,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
@@ -26,6 +30,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -256,12 +261,20 @@ public class MainActivity extends AppCompatActivity {
         adapter = new FirestoreRecyclerAdapter<Gpu, GpuHolder>(options) {
 
             @Override
-            protected void onBindViewHolder(@NonNull GpuHolder holder, int position, @NonNull Gpu gpu) {
+            protected void onBindViewHolder(@NonNull GpuHolder holder, int position, @NonNull final Gpu gpu) {
                 holder.textViewModel.setText(gpu.getModel());
                 holder.textViewPrice.setText(String.valueOf(gpu.getPrice()));
                 holder.textViewBench.setText(String.valueOf(gpu.getBench()));
                 holder.textViewValue.setText(String.valueOf(gpu.getValue()));
                 holder.textViewType.setText(String.valueOf(gpu.getType()));
+
+                holder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), DetailsActivity.class);
+                        startActivity(intent);
+                    }
+                });
             }
             @NonNull
             @Override
@@ -275,6 +288,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.startListening();
         gpuRecycler.setAdapter(adapter);
     }
+
 
 
     public void addToDatabase(String model, double price, double value,
